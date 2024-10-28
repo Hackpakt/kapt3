@@ -1,6 +1,6 @@
-// components/Sidebar.js
 import React, { useState } from 'react';
 import { FaHome, FaExchangeAlt, FaShoppingCart, FaPassport } from 'react-icons/fa';
+import logo from '../../images/logo.png'; // Make sure the path to your logo is correct
 
 const Sidebar = () => {
   const [activeMenu, setActiveMenu] = useState("Home");
@@ -17,7 +17,8 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="w-60 h-full fixed top-0 left-0 p-6 bg-gradient-to-b from-gray-900 to-gray-700 shadow-lg">
+    <div className="w-60 h-full fixed top-16 left-0 p-6 bg-gradient-to-b from-gray-900 to-gray-700 shadow-lg"> {/* Adjusted top to 16 to avoid overlap with navbar */}
+      
       <h2 className="text-2xl font-bold mb-6 text-white">Menu</h2>
       <ul className="space-y-4">
         {menuItems.map((item) => (
