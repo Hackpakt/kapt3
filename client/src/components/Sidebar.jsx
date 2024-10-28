@@ -7,9 +7,9 @@ const Sidebar = () => {
 
   const menuItems = [
     { title: "Home", icon: <FaHome />, href: "/" }, // Main page redirect
-    { title: "Transfer", icon: <FaExchangeAlt />, href: "https://example.com/transfer" }, // Redirects to an external URL
-    { title: "Buy", icon: <FaShoppingCart />, href: "https://example.com/buy" }, // Redirects to an external URL
-    { title: "AgitaPass", icon: <FaPassport />, href: "https://example.com/agitapass" }, // Redirects to an external URL
+    { title: "Transfer", icon: <FaExchangeAlt />, href: "#" }, // Redirects to an external URL
+    { title: "Buy", icon: <FaShoppingCart />, href: "#" }, // Redirects to an external URL
+    { title: "AgitaPass", icon: <FaPassport />, href: "https://agita-pass.vercel.app" }, // Redirects to an external URL
   ];
 
   const handleMenuClick = (href) => {
