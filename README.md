@@ -32,4 +32,4 @@ npm run dev
 ```
 
 ## About
-Developed by **Team HackPAKT**
+Developed by [**Team HackPAKT**](https://github.com/Hackpakt)
