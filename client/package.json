@@ -1,10 +1,13 @@
 {
   "name": "wave-app",
   "version": "0.0.0",
+  "homepage": "https://hackpakt.github.io/kapt3",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@tailwindcss/forms": "^0.3.4",
@@ -12,6 +15,7 @@
     "eth-revert-reason": "^1.0.3",
     "ethers": "^5.5.1",
     "framer-motion": "^5.3.1",
+    "gh-pages": "^6.2.0",
     "postcss": "^8.3.11",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
@@ -24,7 +28,7 @@
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.27.1",
-    "eslint-plugin-react-hooks": "^4.3.0", 
+    "eslint-plugin-react-hooks": "^4.3.0",
     "tailwindcss": "^2.2.19",
     "vite": "^2.6.4"
   }
