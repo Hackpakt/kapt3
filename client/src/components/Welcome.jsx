@@ -50,15 +50,11 @@ const Welcome = () => {
             </div>
             <div className="flex items-center mx-4">
               <GiMoneyStack className="text-2xl mr-2" />
-              <span>Enter Amount</span>
-            </div>
-            <div className="flex items-center mx-4">
-              <MdMessage className="text-2xl mr-2" />
-              <span>Send Message</span>
+              <span>Enter Details</span>
             </div>
             <div className="flex items-center mx-4">
               <MdOutlineTextSnippet className="text-2xl mr-2" />
-              <span>Add Keyword</span>
+              <span>Send Now</span>
             </div>
           </div>
         </div>
