@@ -1,17 +1,35 @@
-# Krypt - Web 3.0 Blockchain Application
-![Krypt](https://i.ibb.co/DVF4tNW/image.png)
 
-### [🌟 Become a top 1% Next.js 13 developer in only one course](https://jsmastery.pro/next13)
-### [🚀 Land your dream programming job in 6 months](https://jsmastery.pro/masterclass)
+# KAPT3 App
 
-## Introduction
-This is a code repository for the corresponding video tutorial.
+KAPT3 is a crypto transfer platform currently under development.
 
-Using Web 3.0 methodologies, Solidity and Metamask you'll learn how to build a your first real Web 3.0 Application - from start to finish.
+## Getting Started
 
-Project created in collaboration with Enyel Sequeira: 
-Portfolio - https://www.enyelsequeira.com
-E-mail - enyelsequeira1994@gmail.com
-Want me to cover the project you've created? Send me an e-mail 👌
+To set up and run this project locally, follow these steps:
 
-## Launch your development career with project-based coaching - https://www.jsmastery.pro
+### 1. Clone the Repository
+Clone the repository to your local machine using the command below:
+```sh
+git clone <repository-url>
+```
+
+### 2. Navigate to the Client Directory
+After cloning, go to the client directory:
+```sh
+cd client
+```
+
+### 3. Install Dependencies
+Install the necessary dependencies:
+```sh
+npm install
+```
+
+### 4. Run the Development Server
+Start the development server with the following command:
+```sh
+npm run dev
+```
+
+## About
+Developed by **Team HackPAKT**
