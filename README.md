@@ -10,7 +10,7 @@ To set up and run this project locally, follow these steps:
 ### 1. Clone the Repository
 Clone the repository to your local machine using the command below:
 ```sh
-git clone <repository-url>
+git clone https://github.com/Hackpakt/kapt3.git
 ```
 
 ### 2. Navigate to the Client Directory
