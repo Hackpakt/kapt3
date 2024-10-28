@@ -1,22 +1,25 @@
 import React, { useContext } from "react";
 import { SiEthereum } from "react-icons/si";
-import { BsInfoCircle } from "react-icons/bs";
+import { AiOutlineArrowRight } from "react-icons/ai";
+import { MdMessage } from "react-icons/md";
+import { GiMoneyStack } from "react-icons/gi";
+import { MdOutlineTextSnippet } from "react-icons/md";
 
 import { TransactionContext } from "../context/TransactionContext";
-import { shortenAddress } from "../utils/shortenAddress";
 import { Loader } from ".";
 
-const companyCommonStyles = "min-h-[70px] sm:px-0 px-2 sm:min-w-[120px] flex justify-center items-center border-[0.5px] border-gray-400 text-sm font-light text-white";
-
-const Input = ({ placeholder, name, type, value, handleChange }) => (
-  <input
-    placeholder={placeholder}
-    type={type}
-    step="0.0001"
-    value={value}
-    onChange={(e) => handleChange(e, name)}
-    className="my-2 w-full rounded-sm p-2 outline-none bg-transparent text-white border-none text-sm white-glassmorphism"
-  />
+const Input = ({ placeholder, name, type, value, handleChange, icon }) => (
+  <div className="flex items-center bg-gray-800 bg-opacity-50 border border-gray-400 rounded-md p-2 my-2"> {/* Added border here */}
+    {icon}
+    <input
+      placeholder={placeholder}
+      type={type}
+      step="0.0001"
+      value={value}
+      onChange={(e) => handleChange(e, name)}
+      className="w-full bg-transparent outline-none text-white placeholder-gray-400 ml-2 py-2 border-none" // Keep border-none for the input
+    />
+  </div>
 );
 
 const Welcome = () => {
@@ -35,17 +38,66 @@ const Welcome = () => {
   return (
     <div className="flex w-full justify-center items-center">
       <div className="flex flex-col items-center justify-center md:p-20 py-12 px-4 text-center">
-        <h1 className="text-3xl sm:text-5xl text-white text-gradient pb-11 py-1">
+        <h1 className="text-3xl sm:text-5xl text-white text-gradient pb-5">
           Send Crypto <br /> across the world
         </h1>
 
+        <div className="mb-10 text-white">
+          <div className="flex flex-col sm:flex-row justify-around mt-3">
+            <div className="flex items-center mx-3">
+              <AiOutlineArrowRight className="text-2xl mr-2" />
+              <span>Connect Wallet</span>
+            </div>
+            <div className="flex items-center mx-4">
+              <GiMoneyStack className="text-2xl mr-2" />
+              <span>Enter Amount</span>
+            </div>
+            <div className="flex items-center mx-4">
+              <MdMessage className="text-2xl mr-2" />
+              <span>Send Message</span>
+            </div>
+            <div className="flex items-center mx-4">
+              <MdOutlineTextSnippet className="text-2xl mr-2" />
+              <span>Add Keyword</span>
+            </div>
+          </div>
+        </div>
+
         <div className="flex flex-col flex-1 items-center justify-start w-full mf:mt-0 mt-10">
-          
           <div className="p-5 sm:w-96 w-full flex flex-col justify-start items-center blue-glassmorphism">
-            <Input placeholder="Address To" name="addressTo" type="text" handleChange={handleChange} />
-            <Input placeholder="Amount (ETH)" name="amount" type="number" handleChange={handleChange} />
-            <Input placeholder="Keyword (Gif)" name="keyword" type="text" handleChange={handleChange} />
-            <Input placeholder="Enter Message" name="message" type="text" handleChange={handleChange} />
+            <h2 className="text-lg font-bold text-white mb-4">Send Your Cryptocurrency</h2>
+
+            {/* Separate div for inputs */}
+            <div className="flex flex-col w-full">
+              <Input 
+                placeholder="Address To" 
+                name="addressTo" 
+                type="text" 
+                handleChange={handleChange} 
+                icon={<SiEthereum className="text-white" />}
+              />
+              <Input 
+                placeholder="Amount (ETH)" 
+                name="amount" 
+                type="number" 
+                handleChange={handleChange} 
+                icon={<GiMoneyStack className="text-white" />} 
+              />
+              <Input 
+                placeholder="Keyword (Gif)" 
+                name="keyword" 
+                type="text" 
+                handleChange={handleChange} 
+                icon={<MdMessage className="text-white" />} 
+              />
+              <Input 
+                placeholder="Enter Message" 
+                name="message" 
+                type="text" 
+                handleChange={handleChange} 
+                icon={<MdOutlineTextSnippet className="text-white" />} 
+              />
+            </div>
 
             <div className="h-[1px] w-full bg-gray-400 my-2" />
 
