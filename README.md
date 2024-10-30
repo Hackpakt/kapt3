@@ -2,6 +2,8 @@
 # KAPT3 App
 
 KAPT3 is a crypto transfer platform currently under development. test45
+You can try out KAPT3 by visiting our live demo at [kapt3.netlify.app](https://kapt3.netlify.app).
+
 
 ## Getting Started
 
