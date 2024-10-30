@@ -82,3 +82,20 @@ body {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes glow {
+  0%, 100% {
+    color: white;
+    text-shadow: 0 0 5px white, 0 0 10px white;
+  }
+  50% {
+    color: white;
+    text-shadow: 0 0 10px #e0e0e0, 0 0 20px #e0e0e0;
+  }
+}
+
+.animate-glow {
+  animation: glow 1.5s infinite ease-in-out; /* Adjusted duration for subtle effect */
+}
+
+
